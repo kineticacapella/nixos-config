@@ -27,8 +27,6 @@
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  # Test comment
-
   # Enable networking
   networking.networkmanager.enable = true;
 
@@ -71,30 +69,29 @@
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    helix
-    wget
-    git
-    zig
-    river
-    fastfetch
     btop
-    nh
-    nix-tree
-    nix-output-monitor
-    mc
-    pixman
+    fastfetch
     fcft
-    wayland
-    wayland-scanner
-    wayland-protocols
-    pkg-config
-    river
-    libinput
-    libxkbcommon
     firefox
     foot
+    git
+    helix
+    libinput
+    libxkbcommon
+    mc
+    nh
+    nix-output-monitor
+    nix-tree
+    pkg-config
+    pixman
+    river
+    vim
+    wayland
+    wayland-protocols
+    wayland-scanner
+    wget
     wmenu
+    zig
         
   ];
 
