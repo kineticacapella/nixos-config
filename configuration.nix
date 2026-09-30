@@ -58,10 +58,14 @@
   users.users."siyath" = {
     isNormalUser = true;
     description = "Siyath";
+    shell = pkgs.zsh;
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
   };
 
+  # Enable zsh system-wide
+  programs.zsh.enable = true;
+ 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
