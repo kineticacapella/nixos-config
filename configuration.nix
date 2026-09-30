@@ -54,7 +54,10 @@
     variant = "";
   };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  # Enable zsh system-wide
+  programs.zsh.enable = true;
+
+  # Define a user account
   users.users."siyath" = {
     isNormalUser = true;
     description = "Siyath";
@@ -63,8 +66,12 @@
     packages = with pkgs; [];
   };
 
-  # Enable zsh system-wide
-  programs.zsh.enable = true;
+  # Set tty font
+  console = {
+    enable = true;
+    font = "ter-v28n";
+    packages = [ pkgs.terminus_font ];
+  };
  
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
@@ -96,14 +103,7 @@
   ];
 
   # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-  
-  # Set a good tty font
-  console = {
-    enable = true;
-    font = "ter-v28n";
-    packages = [ pkgs.terminus_font ];
-  };
+  nixpkgs.config.allowUnfree = true; 
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
