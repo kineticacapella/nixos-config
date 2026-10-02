@@ -6,7 +6,7 @@ let
     version = "unstable";
     inherit src;
     fetchAll = true;
-    hash = lib.fakeHash;
+    hash = "sha256-Lz/Wcy40rxN81n/mBj4YJVbyGOolHzSFZMs93T1h0oQ=";
   };
 in
 stdenv.mkDerivation {
