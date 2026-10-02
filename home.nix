@@ -4,6 +4,7 @@ let
   # Compile kwm using the recipe in ./pkgs/kwm.nix and the raw source code
   kwm = pkgs.callPackage ./pkgs/kwm.nix {
     src = inputs.kwm-src;
+    zig = pkgs.zig;
   };
 in
 {
