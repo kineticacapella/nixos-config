@@ -38,6 +38,18 @@ in
     };
   };
 
+  # Enable helix
+  programs.helix = {
+    enable = true;
+    settings = {
+      editor = {
+        line-number = "relative";
+        mouse = true;
+      };
+      theme = "base16_transparent";
+    };
+  };
+
   # Install the compiled kwm package
   home.packages = [
     kwm
