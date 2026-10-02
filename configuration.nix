@@ -83,6 +83,7 @@
     foot
     git
     helix
+    jetbrains-mono
     libinput
     libxkbcommon
     mc
