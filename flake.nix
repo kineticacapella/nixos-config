@@ -9,7 +9,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Fetch raw source code without expecting a flake.nix upstream
+    # Fetch raw source code
     kwm-src = {
       url = "github:kewuaa/kwm";
       flake = false;
@@ -18,7 +18,7 @@
 
   outputs = { self, nixpkgs, home-manager, kwm-src, ... }@inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux"; # Adjust to "aarch64-linux" if on ARM
+      system = "x86_64-linux";
       specialArgs = { inherit inputs; };
       modules = [
         ./hardware-configuration.nix

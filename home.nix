@@ -7,7 +7,6 @@ let
   };
 in
 {
-  # Replace 'yourusername' with your actual username
   home.username = "siyath";
   home.homeDirectory = "/home/siyath";
   home.stateVersion = "24.11";
@@ -15,10 +14,11 @@ in
   programs.gh = {
     enable = true;
     settings = {
-      git_protocol = "https"; # Or "ssh" if you prefer SSH
+      git_protocol = "https"; # Using https
     };
   };
 
+  # Enable zsh
   programs.zsh = {
     enable = true;
     enableCompletion = true;
