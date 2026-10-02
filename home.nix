@@ -25,6 +25,10 @@ in
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
+  initExtra = ''
+      bindkey '^I' autosuggest-accept
+    '';
+
     # omz
     oh-my-zsh = {
       enable = true;
