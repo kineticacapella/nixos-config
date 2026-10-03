@@ -56,7 +56,24 @@
       "inputs": {
         "home-manager": "home-manager",
         "kwm-src": "kwm-src",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "wezterm-config": "wezterm-config"
+      }
+    },
+    "wezterm-config": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1791029123,
+        "narHash": "sha256-9k53IKxvsBt1tvttRJ+QlX1xDOwrMEQroDLjI1UBq/Q=",
+        "owner": "kineticacapella",
+        "repo": "wezterm-config",
+        "rev": "d87d1f0c1f4fe48b68a058bab92ca1d2ea552831",
+        "type": "github"
+      },
+      "original": {
+        "owner": "kineticacapella",
+        "repo": "wezterm-config",
+        "type": "github"
       }
     }
   },

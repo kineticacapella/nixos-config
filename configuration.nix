@@ -90,6 +90,7 @@
     libinput
     libxkbcommon
     mc
+    neovim
     nh
     nix-output-monitor
     nix-tree
