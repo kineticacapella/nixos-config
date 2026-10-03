@@ -38,7 +38,7 @@ in
     };
   };
 
-  # Enable helix
+  # Enable and configure helix
   programs.helix = {
     enable = true;
     settings = {
