@@ -94,6 +94,8 @@
     nh
     nix-output-monitor
     nix-tree
+    nixd
+    nixfmt-rfc-style
     pkg-config
     pixman
     river
