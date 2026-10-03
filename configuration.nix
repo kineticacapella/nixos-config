@@ -74,7 +74,7 @@
   };
 
   hardware.graphics.enable = true;
- 
+
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
@@ -86,7 +86,7 @@
     git
     helix
     jetbrains-mono
-    jetbrains-mono-nerd-fonts
+    nerd-fonts.jetbrains-mono
     libinput
     libxkbcommon
     mc
@@ -103,11 +103,11 @@
     wget
     wmenu
     zig
-        
+
   ];
 
   # Allow unfree packages
-  nixpkgs.config.allowUnfree = true; 
+  nixpkgs.config.allowUnfree = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -124,7 +124,7 @@
     enable = true;
     settings.PermitRootLogin = "yes";
   };
-  
+
   # Configure virt-manager
   services.qemuGuest.enable = true;
   services.spice-vdagentd.enable = true;
