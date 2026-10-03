@@ -90,7 +90,6 @@
     libinput
     libxkbcommon
     mc
-    neovim
     nh
     nix-output-monitor
     nix-tree
@@ -108,6 +107,20 @@
     zig
 
   ];
+
+  programs.nix-ld = {
+  enable = true;
+  libraries = with pkgs; [
+    stdenv.cc.cc
+    zlib
+    glibc
+    openssl
+    icu
+    # Node.js and Python runtime dependencies needed by Mason
+    nodejs
+    python3
+  ];
+};
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
