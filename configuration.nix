@@ -72,6 +72,8 @@
     font = "ter-v28n";
     packages = [ pkgs.terminus_font ];
   };
+
+  hardware.graphics.enable = true;
  
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
@@ -80,7 +82,7 @@
     fastfetch
     fcft
     firefox
-    foot
+    wezterm
     git
     helix
     jetbrains-mono
