@@ -86,6 +86,7 @@
     git
     helix
     jetbrains-mono
+    jetbrains-mono-nerd-fonts
     libinput
     libxkbcommon
     mc

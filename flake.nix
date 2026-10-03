@@ -14,9 +14,14 @@
       url = "github:kewuaa/kwm";
       flake = false;
     };
+
+    wezterm-config = {
+      url = "github:kineticacapella/wezterm-config";
+      flake = false;
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, kwm-src, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, kwm-src, wezterm-config, ... }@inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
@@ -30,7 +35,7 @@
           home-manager.useUserPackages = true;
           home-manager.extraSpecialArgs = { inherit inputs; };
           
-          home-manager.users.siyath = import ./home.nix;
+          home-manager.users.siyath = { pkgs, inputs, ... }: (import ./home.nix) { pkgs = pkgs; inputs = inputs; };
         }
       ];
     };

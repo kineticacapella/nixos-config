@@ -61,5 +61,11 @@ in
     // Your custom kwm runtime configuration options go here
   '';
 
+  programs.wezterm = {
+    enable = true;
+  };
+
+  xdg.configFile."wezterm/wezterm.lua".source = inputs.wezterm-config + "/wezterm.lua";
+
   programs.home-manager.enable = true;
 }
